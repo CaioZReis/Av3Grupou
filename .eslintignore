@@ -1,0 +1,10 @@
+node_modules/
+tests/
+#/
+build/
+cdk.out/
+coverage/
+.vscode/
+.github
+CONTRIBUTORS.md
+CHANGELOG.md
