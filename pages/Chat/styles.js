@@ -25,11 +25,15 @@ export const ContainerMessages = styled.View`
 `;
 
 export const Message = styled.Text`
- color:#fff;
- font-size:14px;
- text-align:justify;
- padding-top:5px;
-
+color:#000;
+font-size:14px;
+text-align:justify;
+padding-top:5px;
+marginTop: 5;
+marginBottom: 5;
+marginLeft: 40;
+backgroundColor: '#f7f7f7';
+elevation: 1;
 `
 
 export const ContainerButtons = styled.View`
@@ -65,7 +69,7 @@ export const Input = styled.TextInput`
   margin-right:10px;
 `
 export const Message1 = styled.Text`
- color:#fff;
+ color:#000;
  font-size:14px;
  text-align:justify;
  padding-top:5px;
@@ -73,6 +77,10 @@ export const Message1 = styled.Text`
  marginTop: 5;
  marginBottom: 5;
  marginLeft: 40;
+ backgroundColor: '#dbf5b4';
+ elevation: 1;
+
 
 
 `
+
