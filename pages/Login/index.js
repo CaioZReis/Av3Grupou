@@ -35,7 +35,10 @@ const Login = () => {
   const [email, setEmail] = useState("antonio@domob.me");
   const [carregando, setCarregando] = useState(false);
   const [password, setPassword] = useState("111111");
-  const teste = true;
+
+  
+
+  
 
   function handleSignIn() {
 
@@ -47,14 +50,7 @@ const Login = () => {
 
   }
 
- function mostrarSenha(){
-    if(teste){
-      teste = false;
-    }else{
-      teste=true;
-    }
-   
-  }
+
 
 
   function handleSignUp() {
@@ -116,8 +112,8 @@ const Login = () => {
         />
         <InputTexto>Senha</InputTexto>
         <Input
-          placeholder="Digite sua senha"
-          secureTextEntry={teste}
+          placeholder="Digite sua senha"          
+          secureTextEntry={true}  
           onChangeText={text => setPassword(text)}
           value={password}
         />
@@ -148,10 +144,8 @@ const Login = () => {
             onPress={() => { handleSignIn() }}
           >
             <ButtonText>Entrar</ButtonText>
-          </Button>
-          <ButtonText onPress={() => { mostrarSenha() }}>
-                Mostrar Senha
-              </ButtonText>
+          </Button>        
+         
         </ContainerButtons>
 
 

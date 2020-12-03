@@ -10,6 +10,11 @@ const UsuarioProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [group, setGroup] = useState(null);
   const [route, setRoute] = useState(null);
+  const [security,setSecurity]= useState(true);
+
+  const changeSecurity = (sec) => {
+    setSecurity(sec)
+  }
 
   const ListenAuth = (userState) => {
     setUser(userState)
@@ -70,7 +75,7 @@ const UsuarioProvider = ({ children }) => {
     }
 
   return (
-    <UsuarioContext.Provider value={{ user, group, route, signIn, signOut, signUp, changeGroup, changeRoute,esqueciSenha }}>
+    <UsuarioContext.Provider value={{ user, group, route, signIn, signOut, signUp, changeGroup, changeRoute,esqueciSenha,changeSecurity,security }}>
       {children}
     </UsuarioContext.Provider>
   )
