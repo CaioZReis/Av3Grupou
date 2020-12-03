@@ -15,25 +15,30 @@ export const Texto = styled.Text`
  color:#fff;
  font-size:20px;
  text-align:center;
-
+  marginBottom: 20;
 `
 
 export const ContainerMessages = styled.View`
-  width:100%;
   flex:1;
-
 `;
+
+export const MessageUser = styled.Text`
+color:#000;
+font-size:10px;
+text-align:justify;
+elevation: 1;
+width: 100%;
+color: #FFF;
+opacity: 0.8;
+`
 
 export const Message = styled.Text`
 color:#000;
 font-size:14px;
 text-align:justify;
-padding-top:5px;
-marginTop: 5;
-marginBottom: 5;
-marginLeft: 40;
-backgroundColor: '#f7f7f7';
 elevation: 1;
+width: 100%;
+color: #FFF;
 `
 
 export const ContainerButtons = styled.View`
@@ -42,6 +47,7 @@ export const ContainerButtons = styled.View`
 `
 
 export const Button = styled.TouchableOpacity`
+  padding: 0 20px;
   flex:1;
   width:100%;
   height: 60px;
@@ -60,27 +66,24 @@ export const ButtonText = styled.Text`
   `
 
 export const Input = styled.TextInput`
-  border:1px solid #ccc;
+  border:1px solid #fff;
   height:60px;
   flex:3;
   border-radius:5px;
   padding: 0 20px;
-  background-color:#e6e6e6;
+  background-color:#fff;
   margin-right:10px;
+  color: #ae1b73;
+  fontSize: 18px;
 `
-export const Message1 = styled.Text`
- color:#000;
- font-size:14px;
- text-align:justify;
- padding-top:5px;
- alignItems: 'flex-end;
- marginTop: 5;
- marginBottom: 5;
- marginLeft: 40;
- backgroundColor: '#dbf5b4';
- elevation: 1;
-
-
-
+export const MessageWrapper = styled.View`
+  backgroundColor: #570c39;
+  padding: 8px;
+  borderRadius: 8px;
+  padding-top:5px;
+  alignItems: 'flex-end;
+  marginTop: 5;
+  marginBottom: 5;
+  marginLeft: ${props => props.invert ? "40" : "0"};
+  marginRight: ${props => props.invert ? "0" : "40"};
 `
-

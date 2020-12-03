@@ -12,8 +12,8 @@ import {
   Input,
   ContainerMessages,
   Message,
-  Message1
-
+  MessageUser,
+  MessageWrapper
 } from './styles';
 
 import firebase from 'firebase';
@@ -73,8 +73,14 @@ const Chat = () => {
       <ContainerMessages>
         {messages.map(message => (
           message.usuario === user.email
-          ? <Message1 key={message.id}>{message.texto}</Message1>
-          : <Message key={message.id}>{message.texto}</Message>
+          ? <MessageWrapper key={message.id}>
+              <MessageUser>{message.usuario}</MessageUser>
+              <Message>{message.texto}</Message>
+            </MessageWrapper>
+          : <MessageWrapper invert={true} key={message.id}>
+              <MessageUser>{message.usuario}</MessageUser>
+              <Message>{message.texto}</Message>
+            </MessageWrapper>
         ))}
       </ContainerMessages>
       <Texto>{user.email}</Texto>

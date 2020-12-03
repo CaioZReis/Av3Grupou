@@ -10,7 +10,6 @@ export const Container = styled.View`
 `;
 
 export const CaixaLogin = styled.View`
-  height:52%;
   width:100%;
   background-color:#fff;
   border-top-right-radius:25px;
@@ -26,7 +25,7 @@ export const ContainerBotoes = styled.View`
 export const Botao = styled.TouchableOpacity`
   border-bottom-width:4px;
   border-bottom-color:${props => props.lastClick ? "#AE1B73" : "#fff"};
-  height:60px;
+  height:40px;
   margin: 0px 5px;
   flex:1;
   justify-content:center;
@@ -42,7 +41,7 @@ export const BotaoTexto = styled.Text`
 
 export const Input = styled.TextInput`
   border:1px solid #ccc;
-  height:65px;
+  height:45px;
   margin-top:5px;
   border-radius:5px;
   padding: 0 20px;
@@ -69,7 +68,7 @@ export const ContainerButtons = styled.View`
 export const Button = styled.TouchableOpacity`
   flex:1;
   width:100%;
-  height: 60px;
+  height: 50px;
   background-color: ${props => props.invert ? "#fff" : "#ae1b73"};
   border:1px solid #ae1b73;
   border-radius:5px;
@@ -85,6 +84,7 @@ export const ButtonText = styled.Text`
 `
 
 export const Logo = styled.View`
+  marginBottom: 24px;
  flex:1;
  justify-content:center;
  align-items:center;
@@ -93,6 +93,7 @@ export const CaixaTextoChamada = styled.View`
  flex:1;
  justify-content:center;
  align-items:center;
+ marginBottom: 24px;
 `
 
 export const TextoChamada = styled.Text`

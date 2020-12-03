@@ -4,7 +4,10 @@ import { UsuarioContext } from '../../contexts/user';
 import {
   Container,
   ContainerGrupos,
-  Grupos
+  GruposTitulo,
+  Grupos,
+  GrupoButton,
+  GrupoButtonText
 } from './styles';
 import firebase from 'firebase';
 import 'firebase/firestore';
@@ -35,13 +38,13 @@ const TelaGrupos = () => {
 
     return (
       <Container>
-        <Text> Escolha um Grupo Para </Text>
+        <GruposTitulo> Escolha um Grupo </GruposTitulo>
         <Text>{group || ''}</Text>
         <ContainerGrupos>
           {groups.map(grupo => (
-            <TouchableOpacity onPress={() => _changeGroup(grupo.texto)}>
-              <Text>{grupo.texto}</Text>
-            </TouchableOpacity>  
+            <GrupoButton onPress={() => _changeGroup(grupo.texto)}>
+              <GrupoButtonText>{grupo.texto}</GrupoButtonText>
+            </GrupoButton>  
           ))}
         </ContainerGrupos>
       </Container>

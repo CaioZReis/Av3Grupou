@@ -12,8 +12,9 @@ export const Container = styled.View`
 
 export const ContainerGrupos = styled.View`
   width:100%;
+  marginTop: 8px;
   flex:1;
-
+  alignItems: center;
 `;
 
 export const Grupos = styled.Text`
@@ -39,4 +40,28 @@ export const ButtonText = styled.Text`
 color:${props => props.invert ? "#ae1b73" : "#fff"};
 font-size:16px;
 font-weight:bold;
+`
+export const GrupoButton = styled.TouchableOpacity`
+padding: 10px;
+width:100%;
+maxWidth: 200px;
+background-color: #570c39;
+border:1px solid #fff;
+border-radius:5px;
+justify-content:center;
+align-items:center;
+marginBottom: 8px;
+`
+
+export const GrupoButtonText = styled.Text`
+color: #fff;
+font-size:16px;
+font-weight:600;
+`
+
+export const GruposTitulo = styled.Text`
+color: #fff;
+font-size:24px;
+font-weight:bold;
+marginBottom: 24px;
 `
