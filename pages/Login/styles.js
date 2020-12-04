@@ -37,8 +37,6 @@ export const BotaoTexto = styled.Text`
   color:${props => props.lastClick ? "#673f66" : "#ccc"};
 `
 
-
-
 export const Input = styled.TextInput`
   border:1px solid #ccc;
   height:45px;
@@ -49,7 +47,6 @@ export const Input = styled.TextInput`
 export const InputTexto = styled.Text`
   margin-top:20px;
   color:#b4b8c6;
-  
 `
 
 export const ForgotPassword = styled.TouchableHighlight`
@@ -59,10 +56,14 @@ export const ForgotPassword = styled.TouchableHighlight`
   margin-top:5px;
 `
 
-
 export const ContainerButtons = styled.View`
   flex-direction:row;
   margin-top:30px;
+`
+
+export const ContainerSenha = styled.View`
+  flex-direction:row;
+  justify-content: space-between;
 `
 
 export const Button = styled.TouchableOpacity`
@@ -105,4 +106,8 @@ export const TextoChamada = styled.Text`
 
 export const TextoGrupou = styled.Text`
  font-weight:bold;
+`
+export const BotaoSenha = styled.View`
+  margin-top:2px;
+  padding:2px;
 `

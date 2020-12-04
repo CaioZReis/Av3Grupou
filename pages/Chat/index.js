@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { Text,TouchableHighligth } from 'react-native';
 
 import { UsuarioContext } from '../../contexts/user';
-
+import { ScrollView } from 'react-native-gesture-handler';
 import {
   Container,
   Texto,
@@ -55,7 +55,8 @@ const Chat = () => {
       return
     }
 
-    try {
+    try {  
+        
       firebase.firestore().collection('mensagens').add({
         texto: newMessage,
         lida: false,
@@ -71,6 +72,7 @@ const Chat = () => {
   return (
     <Container>
       <ContainerMessages>
+      <ScrollView>
         {messages.map(message => (
           message.usuario === user.email
           ? <MessageWrapper key={message.id}>
@@ -82,6 +84,7 @@ const Chat = () => {
               <Message>{message.texto}</Message>
             </MessageWrapper>
         ))}
+         </ScrollView>
       </ContainerMessages>
       <Texto>{user.email}</Texto>
       <ContainerButtons>

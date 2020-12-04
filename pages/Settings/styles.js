@@ -41,3 +41,20 @@ export const ButtonText = styled.Text`
   font-size:16px;
   font-weight:bold;
 `
+
+
+
+
+
+export const InputTexto = styled.Text`
+  margin-top:20px;
+  color:#b4b8c6;
+`
+export const Input = styled.TextInput`
+  background-color:#ffffff;
+  border:1px solid #ffffff;
+  height:45px;
+  margin-top:5px;
+  border-radius:5px;
+  padding: 0 20px;
+`

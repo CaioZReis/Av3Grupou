@@ -10,10 +10,15 @@ const UsuarioProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [group, setGroup] = useState(null);
   const [route, setRoute] = useState(null);
-  const [security,setSecurity]= useState(true);
+  const [novaSenha, setNovaSenha] = useState(null);
+  const [confirmSenha,setConfirmSenha] = useState(null);
+ 
 
-  const changeSecurity = (sec) => {
-    setSecurity(sec)
+  const changeNovaSenha = (novaSenha) => {
+    setNovaSenha(novaSenha)
+  }
+  const changeConfirmSenha = (confirmSenha) => {
+    setConfirmSenha(confirmSenha)
   }
 
   const ListenAuth = (userState) => {
@@ -73,9 +78,19 @@ const UsuarioProvider = ({ children }) => {
        console.warn('Erro ao recuperar senha ',erro)
       });
     }
-
+    const trocarSenha = (novaSenha) => {
+      var user1 = firebase.auth().currentUser;
+      novaSenha=btoa(novaSenha)
+      console.log(user1)
+      user1.updatePassword(novaSenha).then(function() {
+    // Update successful.
+        console.warn('Senha Trocada' + user1)
+      }).catch(function(error) {
+        console.warn('Erro Inesperado')
+      });
+    }
   return (
-    <UsuarioContext.Provider value={{ user, group, route, signIn, signOut, signUp, changeGroup, changeRoute,esqueciSenha,changeSecurity,security }}>
+    <UsuarioContext.Provider value={{ user, group, route,novaSenha, confirmSenha, changeNovaSenha, changeConfirmSenha, signIn, signOut, signUp, changeGroup, changeRoute,esqueciSenha,trocarSenha}}>
       {children}
     </UsuarioContext.Provider>
   )
